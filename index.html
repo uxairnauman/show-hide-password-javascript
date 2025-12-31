@@ -1,0 +1,42 @@
+<!--
+  CSC 337 — Show/Hide Password
+  Student: Uzair Nauman Beg (Roll No: 051-23-138074)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Visibility Toggle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-label="Password visibility example">
+      <h1>Show / Hide Password</h1>
+      <p class="intro">Use the checkbox to see the password you type.</p>
+
+      <form class="password-form" action="#" autocomplete="off">
+        <div class="form-control">
+          <label for="passwordInput">Password</label>
+          <input
+            id="passwordInput"
+            name="password"
+            type="password"
+            placeholder="Enter your password"
+            required
+          >
+        </div>
+
+        <div class="form-control inline">
+          <input id="togglePassword" type="checkbox" aria-describedby="toggleHelp">
+          <label for="togglePassword">Show password</label>
+        </div>
+        <p id="toggleHelp" class="help-text">Uncheck to hide your password again.</p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
