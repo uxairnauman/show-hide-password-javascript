@@ -1,0 +1,104 @@
+/*
+  CSC 337 — Show/Hide Password
+  Student: Uzair Nauman Beg (Roll No: 051-23-138074)
+*/
+
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #52606d;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+  --radius: 12px;
+  --shadow: 0 14px 30px rgba(31, 41, 55, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: radial-gradient(circle at 20% 20%, #e0e7ff 0%, transparent 25%),
+              radial-gradient(circle at 80% 0%, #c7d2fe 0%, transparent 30%),
+              var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.page {
+  width: min(420px, 100%);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+.intro {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.password-form {
+  display: grid;
+  gap: 14px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-control.inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="password"],
+input[type="text"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.help-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 22px;
+  }
+}
