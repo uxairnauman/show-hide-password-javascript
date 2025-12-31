@@ -1,4 +1,4 @@
-JavaScript logic (brief):
+JavaScript :
 
 When the page finishes loading, grab the password input and checkbox.
 Listen for checkbox change events.
